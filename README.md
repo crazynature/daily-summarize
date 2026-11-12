@@ -11,8 +11,8 @@
 | 文件 | 记录内容 |
 | --- | --- |
 | `OVERVIEW.md` | 当前目标、进度、长期约定和相关链接 |
-| `daily-context.md` | 最近一个工作日的进展，以及下次从哪一步开始 |
-| `TODO.md` | 待办事项 `[ ]` 和等待中的事项 `[~]` |
+| `daily-context.md` | 只保留最近一个工作日。跨日收尾时整份覆盖，同一天多次收尾时合并进展并更新下一步。 |
+| `TODO.md` | 只放待办 `[ ]` 和等待中的事项 `[~]`。完成项归档到 `DONE.md` 后移除，超过 30 条时合并重复或相关条目，保留仍需处理的工作。 |
 | `DONE.md` | 按任务归档的完成记录，以及相关 PR、提交或结论 |
 
 在 Git 项目里，技能通过本地排除文件 `.git/info/exclude` 将未跟踪的笔记留在本机。
@@ -33,8 +33,8 @@ The skill stores project context in four Markdown files under `docs/local/`.
 | File | Contents |
 | --- | --- |
 | `OVERVIEW.md` | Current goal, status, standing rules, and useful links |
-| `daily-context.md` | The latest workday's progress and where to start next |
-| `TODO.md` | Open `[ ]` and waiting `[~]` items |
+| `daily-context.md` | The latest workday's progress and next steps. Each new workday replaces the previous entry at wrap-up. Multiple wrap-ups on the same day merge that day's progress. |
+| `TODO.md` | Open `[ ]` and waiting `[~]` items. Archive completed work in `DONE.md` before removing it. Above 30 items, consolidate duplicate or related entries and preserve pending work. |
 | `DONE.md` | Completed work by ticket, with the relevant PR, commit, or outcome |
 
 In Git projects, the skill uses the local `.git/info/exclude` file to keep untracked notes on your machine.

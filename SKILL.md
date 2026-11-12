@@ -16,8 +16,8 @@ Keep project context in four Markdown files under `docs/local/` so a new convers
 | File | Contents |
 | --- | --- |
 | `OVERVIEW.md` | Keep it to about 50 lines. **Goal** holds the ticket ID, a one- or two-sentence goal, and the current status. **Notes** holds standing rules, lasting decisions, and recurring pitfalls. **Pointers** links to relevant documents. Rewrite stale entries in place. |
-| `daily-context.md` | Keep the latest workday only. Record what happened, relevant commit, PR, or run IDs, and a `Start here` section with the next steps in order. Replace the file at wrap-up. |
-| `TODO.md` | Track open items as `[ ]` and items waiting on someone as `[~]`. Add newly identified work and remove closed items. |
+| `daily-context.md` | Keep one dated workday. Record what happened, relevant commit, PR, or run IDs, and a `Start here` section with the next steps in order. |
+| `TODO.md` | Keep a concise list of open `[ ]` and waiting `[~]` items. Use one line per item where practical and 30 active items as the cleanup threshold. |
 | `DONE.md` | Append finished or closed items under their ticket, with the date and the PR, commit, or fact that explains the outcome. |
 
 Give each item one home. Use a short pointer when the handoff needs to reference a task or decision already recorded elsewhere.
@@ -31,15 +31,15 @@ For a Git project, run `git check-ignore docs/local/OVERVIEW.md` after creating 
 - When the user states a goal or ticket, create `OVERVIEW.md` or update its **Goal** in the same turn. Include a ticket ID when one is available.
 - When the goal changes, update **Goal**. If the old goal was finished or dropped, record its outcome in `DONE.md`.
 - When the user gives a standing rule or a recurring pitfall is discovered, update **Notes** in the same turn.
-- As work progresses, keep `TODO.md` and `DONE.md` current.
+- As work progresses, add new open or waiting items to `TODO.md`. Record completed or closed items in `DONE.md` before removing them from `TODO.md`.
 
 ## At wrap-up
 
 1. Create any missing files and verify the local Git exclusion.
 2. Update **Goal** and **Notes** in `OVERVIEW.md` and replace stale information.
-3. Append newly completed or closed items to `DONE.md` under their tickets.
-4. Remove closed items from `TODO.md` and add newly identified or waiting work.
-5. Before replacing `daily-context.md`, move any information that still matters into its proper home. Replace the file with the latest workday's entry and the ordered `Start here` steps.
+3. Record any remaining completed or closed items in `DONE.md` under their tickets, including checked-off entries still in `TODO.md`. Reuse an existing record when the item is already in `DONE.md`.
+4. Remove the archived items from `TODO.md` and add any new open or waiting work. If more than 30 items remain, merge duplicates and combine related entries where their next actions and blockers can still be seen. If the list still exceeds 30, keep all remaining work and report the count at wrap-up.
+5. Date the new `daily-context.md` entry with the current workday in `YYYY-MM-DD` format. If the previous entry is from the same day, merge the day's progress and results and refresh the ordered `Start here` steps. Otherwise, move any still-relevant information from the previous entry into `OVERVIEW.md`, `TODO.md`, or `DONE.md` before overwriting the whole file with the current day's entry. For an undated entry, merge any progress you can place on the current day and carry forward the rest that still matters before overwriting.
 6. End the reply with the opening line as a quote.
 
 ## Opening line
