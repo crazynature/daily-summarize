@@ -24,6 +24,10 @@
 
 > 读取 `docs/local/OVERVIEW.md`、`docs/local/daily-context.md` 和 `docs/local/TODO.md`。继续 SHOP-41，补上退款明细行。
 
+### 许可证
+
+技能与文档采用 [CC BY 4.0](LICENSE) 许可。分享原版或改编版时，请署名 `crazynature`，附上许可证链接，并注明是否做过修改。
+
 ## English
 
 **Daily Summarize** is a Claude Code skill for handing off work between sessions. It records the goal when work starts, updates project rules and progress as they change, and captures the next step at wrap-up. Paste a two-sentence opening prompt into a new conversation to pick up where you left off.
@@ -45,3 +49,7 @@ In Git projects, the skill uses the local `.git/info/exclude` file to keep untra
 2. In Claude Code, type `/daily-summarize` and describe the current task or ask to wrap up. Paste the generated opening prompt into your next conversation.
 
 > Read `docs/local/OVERVIEW.md`, `docs/local/daily-context.md`, and `docs/local/TODO.md`. Continue SHOP-41 by adding the refund rows.
+
+### License
+
+The skill and documentation are licensed under [CC BY 4.0](LICENSE). When sharing the original or an adaptation, credit `crazynature`, link to the license, and indicate whether you made changes.
